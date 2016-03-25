@@ -24,11 +24,14 @@
     [super viewDidLoad];
     
     // 滑动条slider
-    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake((SCREENWIDTH - 250) / 2, 200, 250, 20)];
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake((SCREENWIDTH - 150) / 2, 200, 150, 20)];
     slider.minimumValue = 9;// 设置最小值
     slider.maximumValue = 11;// 设置最大值
     slider.value = (slider.minimumValue + slider.maximumValue) / 2;// 设置初始值
     slider.continuous = YES;// 设置可连续变化
+//    slider.minimumTrackTintColor = [UIColor greenColor]; //滑轮左边颜色，如果设置了左边的图片就不会显示
+//    slider.maximumTrackTintColor = [UIColor redColor]; //滑轮右边颜色，如果设置了右边的图片就不会显示
+//    slider.thumbTintColor = [UIColor redColor];//设置了滑轮的颜色，如果设置了滑轮的样式图片就不会显示
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];// 针对值变化添加响应方法
     [self.view addSubview:slider];
     
