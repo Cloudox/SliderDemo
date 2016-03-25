@@ -39,13 +39,13 @@
     [self.view addSubview:self.valueLabel];
     
     // 最小值label
-    UILabel *minLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 32, slider.frame.origin.y, 30, 20)];
+    UILabel *minLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 35, slider.frame.origin.y, 30, 20)];
     minLabel.textAlignment = NSTextAlignmentRight;
     minLabel.text = [NSString stringWithFormat:@"%.1f", slider.minimumValue];
     [self.view addSubview:minLabel];
     
     // 最大值label
-    UILabel *maxLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x + slider.frame.size.width + 2, slider.frame.origin.y, 30, 20)];
+    UILabel *maxLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x + slider.frame.size.width + 5, slider.frame.origin.y, 30, 20)];
     maxLabel.textAlignment = NSTextAlignmentLeft;
     maxLabel.text = [NSString stringWithFormat:@"%.1f", slider.maximumValue];
     [self.view addSubview:maxLabel];
